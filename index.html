@@ -21,12 +21,17 @@
         // console.log(hello({name: 'midia', last: 'hamdi'}));
 
         function Hello(props){
-            return <div> hello {props.name} {props.last}</div>
+            return <div>
+                        <div> hello {props.name} {props.last}</div>
+                        {props.children}
+                   </div>
         }
 
-        
+        const element = <Hello name="siavash" last="soleymanpour">
+                            <div>welcome</div>
+                        </Hello>
 
-        ReactDOM.render(<Hello name="siavash" last="soleymanpour" />, document.getElementById('root'))
+        ReactDOM.render(element, document.getElementById('root'))
     </script>
 </body>
 </html>
