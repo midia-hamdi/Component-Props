@@ -14,11 +14,17 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <script type="text/babel">
-        function Hello(user){
+        function hello(user){
             return 'hello' + ' ' + user.name + ' ' + user.last;
         }
 
-        console.log(Hello({name: 'midia', last: 'hamdi'}));
+        console.log(hello({name: 'midia', last: 'hamdi'}));
+
+        function Hello(props){
+            return <div> hello {props.name} {props.last}</div>
+        }
+
+        ReactDOM.render(<Hello name="siavash" last="soleymanpour" />, document.getElementById('root'))
     </script>
 </body>
 </html>
